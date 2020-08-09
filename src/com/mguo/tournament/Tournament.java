@@ -13,10 +13,10 @@ public class Tournament {
 	// best way to find the max value besides/except max value
 	// o(n*lgn)
 	public static int[] tournament(int[] arr) {
-		int length = arr.length;
-		if (length < 2) {
+		if (arr == null || arr.length < 2) {
 			throw new IllegalArgumentException();
 		}
+		int length = arr.length;
 
 		if (length == 2) {
 			return new int[] { Math.max(arr[0], arr[1]), Math.min(arr[0], arr[1]) };
