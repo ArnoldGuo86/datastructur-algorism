@@ -14,7 +14,13 @@ public class QuickSort {
 	 * @param arr
 	 */
 	public static void quickSort(int[] arr) {
-		sort(arr, 0, arr.length - 1);
+		if (arr == null) {
+			throw new IllegalArgumentException();
+		}
+
+		if (arr.length > 2) {
+			sort(arr, 0, arr.length - 1);
+		}
 	}
 
 	private static int partition(int[] arr, int low, int high) {
