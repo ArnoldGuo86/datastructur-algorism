@@ -2,16 +2,8 @@ package com.mguo.tournament;
 
 public class Tournament {
 
-	public static void main(String[] args) {
-		int[] arr = new int[] { 5, 6, 7, 8, 9 };
-		int[] result = tournament(arr);
-
-		System.out.println(result[0]);
-		System.out.println(result[1]);
-	}
-
 	// best way to find the max value besides/except max value
-	// o(n*lgn)
+	// O(nlog2n)
 	public static int[] tournament(int[] arr) {
 		if (arr == null || arr.length < 2) {
 			throw new IllegalArgumentException();
