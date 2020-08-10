@@ -15,6 +15,12 @@ public class HeapSort {
 
 	/**
 	 * 
+	 * Heap sort
+	 * 
+	 * unstable
+	 * 
+	 * O(nlog2n)
+	 * 
 	 * @param arr
 	 */
 	public static void heapSort(int[] arr) {
@@ -22,10 +28,11 @@ public class HeapSort {
 		buildHeap(arr);
 
 		for (int i = arr.length - 1; i >= 0; i--) {
-			// after heapify each time, the max value must be at heap top, which means it's
-			// index is 0, exchange it with the last node, and when execute heapify again,
-			// the length should minus 1 each time which means the biggest one is already at
-			// last and we don't need sort it again. Therefore length is i.
+			// after heapify executing each time, the max value must be at heap top, which
+			// means it's index is 0, exchange it with the last node, and when execute
+			// heapify again, the length should minus 1 each time which means the biggest
+			// one is already at last and we don't need sort it again. Therefore length is
+			// i. and use first value as new parent
 			SwapUtil.intArraySwap(arr, i, 0);
 
 			// adjust heap structure on remain nodes
